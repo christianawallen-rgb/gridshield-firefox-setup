@@ -1,0 +1,457 @@
+/*
+ * GridShield Security - Firefox Developer Edition UI Customization
+ * Version: 1.0
+ * Datum: 2025-11-13
+ *
+ * Detta CSS-tema anpassar Firefox Developer Edition för:
+ * - Cybersecurity-fokuserat UI
+ * - Förbättrad synlighet för containers
+ * - Minimalistisk design för fokuserat arbete
+ * - Dark mode-optimering
+ *
+ * INSTALLATION:
+ * 1. Hitta din profilmapp: about:support → Profile Directory → Open Directory
+ * 2. Skapa mappen "chrome" om den inte finns
+ * 3. Kopiera denna fil till chrome/userChrome.css
+ * 4. Starta om Firefox
+ */
+
+/* ============================================================================
+ * GLOBAL VARIABLER - GridShield Färgschema
+ * ============================================================================ */
+
+:root {
+  /* GridShield Brand Colors */
+  --gridshield-primary: #00FF41;      /* Matrix-grön */
+  --gridshield-secondary: #0066FF;    /* Cyber-blå */
+  --gridshield-accent: #FF6B00;       /* Varnings-orange */
+  --gridshield-danger: #FF0033;       /* Kritisk-röd */
+
+  /* Dark Theme Base */
+  --gridshield-bg-dark: #0C0C0C;
+  --gridshield-bg-medium: #1C1C1C;
+  --gridshield-bg-light: #2C2C2C;
+
+  /* Text Colors */
+  --gridshield-text-primary: #FFFFFF;
+  --gridshield-text-secondary: #B0B0B0;
+  --gridshield-text-accent: var(--gridshield-primary);
+
+  /* Container Colors (förstärkt synlighet) */
+  --container-work-m365: #0078D4;     /* Microsoft Blue */
+  --container-work-google: #34A853;   /* Google Green */
+  --container-development: #FF7139;   /* Orange */
+  --container-client-access: #DC3545; /* Red */
+  --container-security-research: #8B5CF6; /* Purple */
+  --container-testing-sandbox: #FFC107; /* Yellow */
+  --container-personal: #6C757D;      /* Gray */
+}
+
+/* ============================================================================
+ * TOOLBAR CUSTOMIZATION
+ * ============================================================================ */
+
+/* Huvudtoolbar - Dark theme */
+#nav-bar {
+  background: var(--gridshield-bg-dark) !important;
+  border-bottom: 2px solid var(--gridshield-primary) !important;
+}
+
+/* URL-fältet - Cyber-stil */
+#urlbar {
+  background: var(--gridshield-bg-medium) !important;
+  border: 1px solid var(--gridshield-secondary) !important;
+  border-radius: 8px !important;
+  color: var(--gridshield-text-primary) !important;
+  font-family: "Cascadia Code", "Fira Code", "Consolas", monospace !important;
+  font-size: 13px !important;
+}
+
+/* URL-fält vid fokus */
+#urlbar[focused="true"] {
+  border: 2px solid var(--gridshield-primary) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 65, 0.3) !important;
+}
+
+/* HTTPS-lås ikon - förstärkt synlighet */
+#identity-icon-label {
+  color: var(--gridshield-primary) !important;
+  font-weight: bold !important;
+}
+
+/* Osäkra sidor - röd varning */
+#urlbar[pageproxystate="invalid"] #identity-box {
+  background: var(--gridshield-danger) !important;
+}
+
+/* ============================================================================
+ * TABBAR CUSTOMIZATION
+ * ============================================================================ */
+
+/* Tabbar bakgrund */
+.tabbrowser-tab {
+  background: var(--gridshield-bg-medium) !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin-inline-end: 2px !important;
+}
+
+/* Aktiv tab */
+.tabbrowser-tab[selected="true"] {
+  background: var(--gridshield-bg-light) !important;
+  border-top: 3px solid var(--gridshield-primary) !important;
+}
+
+/* Tab hover-effekt */
+.tabbrowser-tab:hover {
+  background: var(--gridshield-bg-light) !important;
+  box-shadow: 0 -2px 5px rgba(0, 255, 65, 0.2) !important;
+}
+
+/* Tab text färg */
+.tab-text {
+  color: var(--gridshield-text-primary) !important;
+  font-family: "Segoe UI", "Arial", sans-serif !important;
+}
+
+/* ============================================================================
+ * CONTAINER TAB INDICATORS - Förstärkt Synlighet
+ * ============================================================================ */
+
+/* Work-M365 Container (Blå) */
+.tabbrowser-tab[usercontextid="1"] {
+  border-bottom: 4px solid var(--container-work-m365) !important;
+}
+.tabbrowser-tab[usercontextid="1"] .tab-context-line {
+  background-color: var(--container-work-m365) !important;
+  height: 4px !important;
+}
+
+/* Work-Google Container (Grön) */
+.tabbrowser-tab[usercontextid="2"] {
+  border-bottom: 4px solid var(--container-work-google) !important;
+}
+.tabbrowser-tab[usercontextid="2"] .tab-context-line {
+  background-color: var(--container-work-google) !important;
+  height: 4px !important;
+}
+
+/* Development Container (Orange) */
+.tabbrowser-tab[usercontextid="3"] {
+  border-bottom: 4px solid var(--container-development) !important;
+}
+.tabbrowser-tab[usercontextid="3"] .tab-context-line {
+  background-color: var(--container-development) !important;
+  height: 4px !important;
+}
+
+/* Client-Access Container (Röd) */
+.tabbrowser-tab[usercontextid="4"] {
+  border-bottom: 4px solid var(--container-client-access) !important;
+}
+.tabbrowser-tab[usercontextid="4"] .tab-context-line {
+  background-color: var(--container-client-access) !important;
+  height: 4px !important;
+}
+
+/* Security-Research Container (Lila) */
+.tabbrowser-tab[usercontextid="5"] {
+  border-bottom: 4px solid var(--container-security-research) !important;
+}
+.tabbrowser-tab[usercontextid="5"] .tab-context-line {
+  background-color: var(--container-security-research) !important;
+  height: 4px !important;
+}
+
+/* Testing-Sandbox Container (Gul) */
+.tabbrowser-tab[usercontextid="6"] {
+  border-bottom: 4px solid var(--container-testing-sandbox) !important;
+  animation: pulse-warning 2s infinite !important;
+}
+.tabbrowser-tab[usercontextid="6"] .tab-context-line {
+  background-color: var(--container-testing-sandbox) !important;
+  height: 4px !important;
+}
+
+/* Personal Container (Grå) */
+.tabbrowser-tab[usercontextid="7"] {
+  border-bottom: 4px solid var(--container-personal) !important;
+}
+.tabbrowser-tab[usercontextid="7"] .tab-context-line {
+  background-color: var(--container-personal) !important;
+  height: 4px !important;
+}
+
+/* Pulsande animation för Testing-Sandbox (varning) */
+@keyframes pulse-warning {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--container-testing-sandbox);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--container-testing-sandbox);
+  }
+}
+
+/* ============================================================================
+ * SIDEBAR CUSTOMIZATION (Developer Tools, etc.)
+ * ============================================================================ */
+
+/* Sidebar bakgrund */
+#sidebar-box {
+  background: var(--gridshield-bg-dark) !important;
+  border-right: 1px solid var(--gridshield-secondary) !important;
+}
+
+/* Sidebar headers */
+#sidebar-header {
+  background: var(--gridshield-bg-medium) !important;
+  border-bottom: 2px solid var(--gridshield-primary) !important;
+}
+
+/* ============================================================================
+ * DEVELOPER TOOLS INTEGRATION
+ * ============================================================================ */
+
+/* Developer Tools theme compatibility */
+:root[devtoolstheme="dark"] {
+  --theme-body-background: var(--gridshield-bg-dark) !important;
+  --theme-sidebar-background: var(--gridshield-bg-medium) !important;
+  --theme-selection-background: var(--gridshield-secondary) !important;
+  --theme-highlight-green: var(--gridshield-primary) !important;
+}
+
+/* ============================================================================
+ * CONTEXT MENU CUSTOMIZATION
+ * ============================================================================ */
+
+/* Context menu (högerklick) */
+menupopup {
+  background: var(--gridshield-bg-medium) !important;
+  border: 1px solid var(--gridshield-secondary) !important;
+  border-radius: 8px !important;
+}
+
+menuitem {
+  color: var(--gridshield-text-primary) !important;
+}
+
+menuitem:hover {
+  background: var(--gridshield-bg-light) !important;
+  color: var(--gridshield-primary) !important;
+}
+
+/* ============================================================================
+ * NOTIFICATION BANNERS
+ * ============================================================================ */
+
+/* Notification box - säkerhetsvarningar */
+.notificationbox-stack {
+  background: var(--gridshield-bg-dark) !important;
+}
+
+notification[type="warning"] {
+  background: var(--gridshield-accent) !important;
+  color: var(--gridshield-text-primary) !important;
+  border: 2px solid var(--gridshield-accent) !important;
+}
+
+notification[type="critical"] {
+  background: var(--gridshield-danger) !important;
+  color: var(--gridshield-text-primary) !important;
+  border: 2px solid var(--gridshield-danger) !important;
+  animation: pulse-critical 1s infinite !important;
+}
+
+@keyframes pulse-critical {
+  0%, 100% {
+    box-shadow: 0 0 10px var(--gridshield-danger);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--gridshield-danger);
+  }
+}
+
+/* ============================================================================
+ * SCROLLBAR CUSTOMIZATION
+ * ============================================================================ */
+
+/* Scrollbar - cyber-stil */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: var(--gridshield-secondary) var(--gridshield-bg-dark) !important;
+}
+
+/* ============================================================================
+ * BOOKMARKS TOOLBAR
+ * ============================================================================ */
+
+/* Bookmarks toolbar */
+#PersonalToolbar {
+  background: var(--gridshield-bg-medium) !important;
+  border-bottom: 1px solid var(--gridshield-secondary) !important;
+}
+
+.bookmark-item {
+  color: var(--gridshield-text-secondary) !important;
+  border-radius: 4px !important;
+}
+
+.bookmark-item:hover {
+  background: var(--gridshield-bg-light) !important;
+  color: var(--gridshield-primary) !important;
+}
+
+/* ============================================================================
+ * FINDBAR (Ctrl+F Search)
+ * ============================================================================ */
+
+.findbar-textbox {
+  background: var(--gridshield-bg-medium) !important;
+  border: 1px solid var(--gridshield-secondary) !important;
+  color: var(--gridshield-text-primary) !important;
+}
+
+.findbar-textbox[status="notfound"] {
+  background: var(--gridshield-danger) !important;
+  color: white !important;
+}
+
+/* ============================================================================
+ * PRIVATE BROWSING MODE INDICATOR
+ * ============================================================================ */
+
+/* Private browsing - lila indikator */
+:root[privatebrowsingmode="temporary"] #nav-bar {
+  background: linear-gradient(to right,
+    var(--gridshield-bg-dark),
+    #4B0082
+  ) !important;
+  border-bottom: 3px solid #8B5CF6 !important;
+}
+
+/* ============================================================================
+ * COMPACT MODE ADJUSTMENTS
+ * ============================================================================ */
+
+/* Kompakt toolbar för mer skärmutrymme */
+:root[uidensity="compact"] #nav-bar {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+:root[uidensity="compact"] .tabbrowser-tab {
+  min-height: 30px !important;
+}
+
+/* ============================================================================
+ * SECURITY INDICATORS
+ * ============================================================================ */
+
+/* HTTPS-indikator - grön */
+#identity-box[pageproxystate="valid"].verifiedDomain,
+#identity-box[pageproxystate="valid"].verifiedIdentity {
+  background: rgba(0, 255, 65, 0.1) !important;
+  border-left: 3px solid var(--gridshield-primary) !important;
+}
+
+/* Mixed Content Warning - orange */
+#identity-box[pageproxystate="valid"].mixedDisplayContent {
+  background: rgba(255, 107, 0, 0.2) !important;
+  border-left: 3px solid var(--gridshield-accent) !important;
+}
+
+/* Osäker anslutning - röd */
+#identity-box[pageproxystate="valid"].notSecure {
+  background: rgba(255, 0, 51, 0.2) !important;
+  border-left: 3px solid var(--gridshield-danger) !important;
+}
+
+/* ============================================================================
+ * EXTENSION BUTTON STYLING
+ * ============================================================================ */
+
+/* Extension buttons i toolbar */
+.webextension-browser-action {
+  border-radius: 4px !important;
+}
+
+.webextension-browser-action:hover {
+  background: var(--gridshield-bg-light) !important;
+  box-shadow: 0 0 5px var(--gridshield-primary) !important;
+}
+
+/* uBlock Origin - special styling */
+#ublock0_raymondhill_net-browser-action {
+  filter: drop-shadow(0 0 3px var(--gridshield-primary)) !important;
+}
+
+/* Bitwarden - special styling */
+toolbar .webextension-browser-action[label="Bitwarden"] {
+  filter: drop-shadow(0 0 3px var(--gridshield-secondary)) !important;
+}
+
+/* ============================================================================
+ * READER MODE
+ * ============================================================================ */
+
+/* Reader mode button */
+#reader-mode-button {
+  color: var(--gridshield-text-secondary) !important;
+}
+
+#reader-mode-button:hover {
+  color: var(--gridshield-primary) !important;
+}
+
+/* ============================================================================
+ * ABOUT:PAGES STYLING
+ * ============================================================================ */
+
+/* about:config, about:preferences, etc. */
+@-moz-document url-prefix("about:") {
+  body {
+    background: var(--gridshield-bg-dark) !important;
+    color: var(--gridshield-text-primary) !important;
+  }
+
+  input, select, textarea {
+    background: var(--gridshield-bg-medium) !important;
+    color: var(--gridshield-text-primary) !important;
+    border: 1px solid var(--gridshield-secondary) !important;
+  }
+
+  button {
+    background: var(--gridshield-secondary) !important;
+    color: var(--gridshield-text-primary) !important;
+    border: none !important;
+    border-radius: 4px !important;
+  }
+
+  button:hover {
+    background: var(--gridshield-primary) !important;
+    color: var(--gridshield-bg-dark) !important;
+  }
+}
+
+/* ============================================================================
+ * FINAL TOUCHES - GridShield Branding
+ * ============================================================================ */
+
+/* Subtle GridShield logo effect på new tab */
+@-moz-document url("about:home"), url("about:newtab") {
+  body::before {
+    content: "🛡️ GridShield Security";
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: var(--gridshield-primary);
+    font-family: "Segoe UI", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0.3;
+    z-index: 9999;
+  }
+}
+
+/* ============================================================================
+ * END OF GRIDSHIELD SECURITY FIREFOX CUSTOMIZATION
+ * ============================================================================ */

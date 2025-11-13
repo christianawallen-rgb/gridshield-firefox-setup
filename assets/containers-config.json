@@ -1,0 +1,170 @@
+{
+  "version": 4,
+  "identities": [
+    {
+      "userContextId": 1,
+      "name": "Work-M365",
+      "icon": "briefcase",
+      "color": "blue",
+      "public": true
+    },
+    {
+      "userContextId": 2,
+      "name": "Work-Google",
+      "icon": "circle",
+      "color": "green",
+      "public": true
+    },
+    {
+      "userContextId": 3,
+      "name": "Development",
+      "icon": "cog",
+      "color": "orange",
+      "public": true
+    },
+    {
+      "userContextId": 4,
+      "name": "Client-Access",
+      "icon": "fence",
+      "color": "red",
+      "public": true
+    },
+    {
+      "userContextId": 5,
+      "name": "Security-Research",
+      "icon": "fingerprint",
+      "color": "purple",
+      "public": true
+    },
+    {
+      "userContextId": 6,
+      "name": "Testing-Sandbox",
+      "icon": "fruit",
+      "color": "yellow",
+      "public": true
+    },
+    {
+      "userContextId": 7,
+      "name": "Personal",
+      "icon": "pet",
+      "color": "toolbar",
+      "public": true
+    }
+  ],
+  "siteContainerMap": {
+    "microsoft.com": {
+      "userContextId": 1
+    },
+    "microsoftonline.com": {
+      "userContextId": 1
+    },
+    "office.com": {
+      "userContextId": 1
+    },
+    "sharepoint.com": {
+      "userContextId": 1
+    },
+    "onedrive.com": {
+      "userContextId": 1
+    },
+    "teams.microsoft.com": {
+      "userContextId": 1
+    },
+    "portal.azure.com": {
+      "userContextId": 1
+    },
+    "azurewebsites.net": {
+      "userContextId": 1
+    },
+    "live.com": {
+      "userContextId": 1
+    },
+    "outlook.com": {
+      "userContextId": 1
+    },
+    "google.com": {
+      "userContextId": 2
+    },
+    "googleapis.com": {
+      "userContextId": 2
+    },
+    "mail.google.com": {
+      "userContextId": 2
+    },
+    "drive.google.com": {
+      "userContextId": 2
+    },
+    "docs.google.com": {
+      "userContextId": 2
+    },
+    "calendar.google.com": {
+      "userContextId": 2
+    },
+    "gitlab.com": {
+      "userContextId": 3
+    },
+    "github.com": {
+      "userContextId": 3
+    },
+    "gitbook.com": {
+      "userContextId": 3
+    },
+    "npmjs.com": {
+      "userContextId": 3
+    },
+    "pypi.org": {
+      "userContextId": 3
+    },
+    "docker.com": {
+      "userContextId": 3
+    },
+    "stackoverflow.com": {
+      "userContextId": 3
+    },
+    "stackexchange.com": {
+      "userContextId": 3
+    },
+    "nvd.nist.gov": {
+      "userContextId": 5
+    },
+    "cve.org": {
+      "userContextId": 5
+    },
+    "claroty.com": {
+      "userContextId": 5
+    },
+    "nozominetworks.com": {
+      "userContextId": 5
+    },
+    "cisa.gov": {
+      "userContextId": 5
+    },
+    "ics-cert.us-cert.gov": {
+      "userContextId": 5
+    },
+    "dragos.com": {
+      "userContextId": 5
+    },
+    "tenable.com": {
+      "userContextId": 5
+    },
+    "rapid7.com": {
+      "userContextId": 5
+    },
+    "exploit-db.com": {
+      "userContextId": 5
+    },
+    "linkedin.com": {
+      "userContextId": 7
+    },
+    "facebook.com": {
+      "userContextId": 7
+    },
+    "twitter.com": {
+      "userContextId": 7
+    },
+    "x.com": {
+      "userContextId": 7
+    }
+  }
+}

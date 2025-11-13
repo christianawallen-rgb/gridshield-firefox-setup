@@ -1,0 +1,333 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+  "copyOnSelect": false,
+  "copyFormatting": "none",
+  "theme": "GridShield Dark",
+  "themes": [
+    {
+      "name": "GridShield Dark",
+      "tab": {
+        "background": "#0C0C0CFF",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#1C1C1CFF"
+      },
+      "tabRow": {
+        "background": "#0C0C0CFF",
+        "unfocusedBackground": "#1C1C1CFF"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "useMica": true
+      }
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "font": {
+        "face": "CascadiaCode Nerd Font",
+        "size": 11,
+        "weight": "normal"
+      },
+      "opacity": 85,
+      "useAcrylic": true,
+      "cursorShape": "bar",
+      "cursorColor": "#00FF41",
+      "antialiasingMode": "cleartype"
+    },
+    "list": [
+      {
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "name": "🛡️ GridShield PowerShell",
+        "commandline": "pwsh.exe -NoLogo",
+        "icon": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/assets/Powershell_black_64.png",
+        "colorScheme": "GridShield Dark",
+        "font": {
+          "face": "CascadiaCode Nerd Font",
+          "size": 11
+        },
+        "startingDirectory": "%USERPROFILE%\\Projects",
+        "backgroundImage": null,
+        "backgroundImageOpacity": 0.2,
+        "useAcrylic": true,
+        "acrylicOpacity": 0.85,
+        "padding": "8, 8, 8, 8",
+        "tabTitle": "GridShield PS",
+        "bellStyle": "visual"
+      },
+      {
+        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+        "name": "🐧 Kali Linux (WSL2)",
+        "commandline": "wsl.exe -d kali-linux",
+        "icon": "https://raw.githubusercontent.com/microsoft/WSL/master/documentation/icons/kali.png",
+        "colorScheme": "Kali Dark",
+        "font": {
+          "face": "CascadiaCode Nerd Font",
+          "size": 10
+        },
+        "startingDirectory": "//wsl$/kali-linux/home/%USERNAME%",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.9,
+        "padding": "8, 8, 8, 8",
+        "tabTitle": "Kali",
+        "bellStyle": "visual"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "name": "⚡ Git Bash",
+        "commandline": "C:\\Program Files\\Git\\bin\\bash.exe --login -i",
+        "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+        "colorScheme": "Campbell",
+        "startingDirectory": "%USERPROFILE%\\Projects",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.85,
+        "padding": "8, 8, 8, 8",
+        "tabTitle": "Git Bash"
+      },
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "🔧 Development (Node.js)",
+        "commandline": "pwsh.exe -NoLogo -NoExit -Command \"& {Write-Host '🔧 Development Environment' -ForegroundColor Green; Write-Host ''; Write-Host 'Node:' -NoNewline; node --version; Write-Host 'npm:' -NoNewline; npm --version; Write-Host ''; Write-Host 'Ready for development!' -ForegroundColor Cyan}\"",
+        "colorScheme": "One Half Dark",
+        "startingDirectory": "%USERPROFILE%\\Projects",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.85,
+        "tabTitle": "Dev (Node)",
+        "icon": "https://nodejs.org/static/images/favicons/favicon.ico"
+      },
+      {
+        "guid": "{7f586916-8357-53d4-bb2b-ca96f66fa4fc}",
+        "name": "🐍 Python Environment",
+        "commandline": "pwsh.exe -NoLogo -NoExit -Command \"& {Write-Host '🐍 Python Environment' -ForegroundColor Yellow; Write-Host ''; python --version; Write-Host 'pip:' -NoNewline; pip --version; Write-Host ''}\"",
+        "colorScheme": "One Half Dark",
+        "startingDirectory": "%USERPROFILE%\\Projects",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.85,
+        "tabTitle": "Python",
+        "icon": "https://www.python.org/static/favicon.ico"
+      },
+      {
+        "guid": "{a3a2e83a-884a-5379-baa8-16f193a13b21}",
+        "name": "🔒 Security Tools (Admin)",
+        "commandline": "pwsh.exe -NoLogo",
+        "colorScheme": "GridShield Dark",
+        "startingDirectory": "%USERPROFILE%",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.9,
+        "tabTitle": "Security (Admin)",
+        "elevate": true,
+        "icon": "🛡️",
+        "backgroundImage": null,
+        "backgroundImageOpacity": 0.1
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": false,
+        "name": "⚙️ Command Prompt",
+        "commandline": "cmd.exe",
+        "colorScheme": "Campbell",
+        "tabTitle": "CMD"
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": true,
+        "name": "PowerShell (Legacy)",
+        "source": "Windows.Terminal.PowershellCore"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "name": "GridShield Dark",
+      "background": "#0C0C0C",
+      "foreground": "#00FF41",
+      "black": "#0C0C0C",
+      "blue": "#0037DA",
+      "cyan": "#3A96DD",
+      "green": "#00FF41",
+      "purple": "#881798",
+      "red": "#C50F1F",
+      "white": "#CCCCCC",
+      "yellow": "#F9F1A5",
+      "brightBlack": "#767676",
+      "brightBlue": "#3B78FF",
+      "brightCyan": "#61D6D6",
+      "brightGreen": "#16C60C",
+      "brightPurple": "#B4009E",
+      "brightRed": "#E74856",
+      "brightWhite": "#F2F2F2",
+      "brightYellow": "#F9F1A5",
+      "selectionBackground": "#00FF41",
+      "cursorColor": "#00FF41"
+    },
+    {
+      "name": "Kali Dark",
+      "background": "#1C1C1C",
+      "foreground": "#00FF00",
+      "black": "#000000",
+      "blue": "#0037DA",
+      "cyan": "#00FFFF",
+      "green": "#00FF00",
+      "purple": "#881798",
+      "red": "#FF0000",
+      "white": "#CCCCCC",
+      "yellow": "#FFFF00",
+      "brightBlack": "#555555",
+      "brightBlue": "#3B78FF",
+      "brightCyan": "#00FFFF",
+      "brightGreen": "#00FF00",
+      "brightPurple": "#B4009E",
+      "brightRed": "#FF0000",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#FFFF00",
+      "selectionBackground": "#00FF00",
+      "cursorColor": "#00FF00"
+    }
+  ],
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "horizontal"
+      },
+      "keys": "alt+shift+minus"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "vertical"
+      },
+      "keys": "alt+shift+plus"
+    },
+    {
+      "command": "duplicateTab",
+      "keys": "ctrl+shift+d"
+    },
+    {
+      "command": "newTab",
+      "keys": "ctrl+shift+t"
+    },
+    {
+      "command": "closePane",
+      "keys": "ctrl+shift+w"
+    },
+    {
+      "command": "toggleFullscreen",
+      "keys": "f11"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}"
+      },
+      "keys": "ctrl+shift+1"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "{51855cb2-8cce-5362-8f54-464b92b32386}"
+      },
+      "keys": "ctrl+shift+2"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "{2c4de342-38b7-51cf-b940-2309a097f518}"
+      },
+      "keys": "ctrl+shift+3"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "down"
+      },
+      "keys": "alt+down"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "up"
+      },
+      "keys": "alt+up"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "left"
+      },
+      "keys": "alt+left"
+    },
+    {
+      "command": {
+        "action": "moveFocus",
+        "direction": "right"
+      },
+      "keys": "alt+right"
+    },
+    {
+      "command": {
+        "action": "resizePane",
+        "direction": "down"
+      },
+      "keys": "alt+shift+down"
+    },
+    {
+      "command": {
+        "action": "resizePane",
+        "direction": "up"
+      },
+      "keys": "alt+shift+up"
+    },
+    {
+      "command": {
+        "action": "resizePane",
+        "direction": "left"
+      },
+      "keys": "alt+shift+left"
+    },
+    {
+      "command": {
+        "action": "resizePane",
+        "direction": "right"
+      },
+      "keys": "alt+shift+right"
+    },
+    {
+      "command": "openSettings",
+      "keys": "ctrl+,"
+    },
+    {
+      "command": {
+        "action": "sendInput",
+        "input": "clear\r"
+      },
+      "keys": "ctrl+l"
+    }
+  ],
+  "keybindings": [],
+  "tabWidthMode": "equal",
+  "showTabsInTitlebar": true,
+  "showTerminalTitleInTitlebar": true,
+  "startOnUserLogin": false,
+  "launchMode": "default",
+  "initialCols": 120,
+  "initialRows": 30,
+  "experimental.rendering.forceFullRepaint": false,
+  "experimental.rendering.software": false
+}
