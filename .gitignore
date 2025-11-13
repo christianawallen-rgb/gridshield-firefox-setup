@@ -1,0 +1,59 @@
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Logs
+*.log
+logs/
+*.tmp
+
+# Firefox Profiles (känslig data)
+*.default/
+*.default-release/
+profiles/
+
+# PowerShell
+*.ps1~
+*.swp
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# User-specific files
+user.js.backup
+prefs.js.backup
+
+# Certificates (privata nycklar)
+*.der
+*.pem
+*.key
+*.crt
+
+# SSH keys
+id_rsa
+id_ed25519
+*.pub
+
+# Bitwarden exports
+bitwarden-export-*.json
+bitwarden-export-*.csv
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
