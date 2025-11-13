@@ -60,7 +60,45 @@ GridShield Security använder nu **Proton Business** för military-grade email s
 
 ---
 
-## Snabbstart
+## 🚀 Day 1 Complete Setup (NYTT!)
+
+**🎯 Från noll till produktionsklar miljö på 4-5 timmar!**
+
+Vi har skapat en komplett **Day 1 Setup Checklist** som samordnar **alla guider** i perfekt ordning:
+
+**📋 Master Checklist:** [docs/day-1-setup-checklist.md](docs/day-1-setup-checklist.md)
+**🃏 Quick Reference:** [docs/quick-reference-card.md](docs/quick-reference-card.md) (skriv ut!)
+
+**Vad du får efter Day 1:**
+- ✅ Proton Business email (end-to-end encrypted)
+- ✅ SimpleLogin Premium aliases (unlimited)
+- ✅ Firefox med 7 containers (Zero Trust)
+- ✅ Proton Pass lösenordshantering
+- ✅ Windows Terminal optimerad
+- ✅ WSL2 Kali Linux (optional)
+- ✅ Burp Suite integration (optional)
+
+**Timeline:**
+```
+0:00 → Pre-Setup (15 min)
+0:15 → Proton Business Setup (45 min)
+1:00 → DNS Configuration (30 min)
+1:30 → DNS Wait + Coffee Break ☕ (30 min)
+2:00 → Email Testing (15 min)
+2:15 → Windows 11 Installation (30 min)
+2:45 → Firefox Setup (60 min)
+3:45 → Windows Terminal (20 min)
+4:05 → WSL2 Kali (optional, 30 min)
+4:35 → Final Verification (15 min)
+───────────────────────────
+Total: 4-5 timmar
+```
+
+**🎯 Start här:** [Day 1 Setup Checklist](docs/day-1-setup-checklist.md)
+
+---
+
+## Snabbstart (Om du redan har Proton konfigurerat)
 
 ### För Windows-användare (Rekommenderat)
 
