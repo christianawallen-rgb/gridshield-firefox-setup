@@ -10,7 +10,7 @@
     },
     {
       "userContextId": 2,
-      "name": "Work-Google",
+      "name": "Work-Proton",
       "icon": "circle",
       "color": "green",
       "public": true
@@ -82,22 +82,37 @@
     "outlook.com": {
       "userContextId": 1
     },
-    "google.com": {
+    "admin.microsoft.com": {
+      "userContextId": 1
+    },
+    "proton.me": {
       "userContextId": 2
     },
-    "googleapis.com": {
+    "mail.proton.me": {
       "userContextId": 2
     },
-    "mail.google.com": {
+    "calendar.proton.me": {
       "userContextId": 2
     },
-    "drive.google.com": {
+    "drive.proton.me": {
       "userContextId": 2
     },
-    "docs.google.com": {
+    "pass.proton.me": {
       "userContextId": 2
     },
-    "calendar.google.com": {
+    "account.proton.me": {
+      "userContextId": 2
+    },
+    "protonmail.com": {
+      "userContextId": 2
+    },
+    "protonvpn.com": {
+      "userContextId": 2
+    },
+    "simplelogin.io": {
+      "userContextId": 2
+    },
+    "app.simplelogin.io": {
       "userContextId": 2
     },
     "gitlab.com": {
@@ -153,6 +168,24 @@
     },
     "exploit-db.com": {
       "userContextId": 5
+    },
+    "google.com": {
+      "userContextId": 7
+    },
+    "googleapis.com": {
+      "userContextId": 7
+    },
+    "mail.google.com": {
+      "userContextId": 7
+    },
+    "drive.google.com": {
+      "userContextId": 7
+    },
+    "docs.google.com": {
+      "userContextId": 7
+    },
+    "calendar.google.com": {
+      "userContextId": 7
     },
     "linkedin.com": {
       "userContextId": 7

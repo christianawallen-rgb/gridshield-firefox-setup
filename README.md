@@ -14,13 +14,49 @@ Detta repository innehåller en **komplett implementeringsplan och automatiserad
 
 ### Vad du får
 
+✅ **Proton Business Email** - End-to-end encrypted email med Swiss privacy
+✅ **SimpleLogin Premium** - Unlimited email aliases för privacy
+✅ **Proton Pass för Business** - Säker lösenordshantering
 ✅ **Zero Trust-arkitektur** med 7 isolerade containers
-✅ **Microsoft 365/Azure AD Seamless SSO**
+✅ **Microsoft 365/Azure AD Seamless SSO** (hybrid-arkitektur)
 ✅ **50+ säkerhetsinställningar** (WebRTC-blockering, HTTPS-Only, telemetri-avstängning)
 ✅ **Purple Team-verktygslåda** (Burp Suite, OWASP ZAP, Kali Linux-integration)
 ✅ **GitLab/GitHub/GitBook-integration**
 ✅ **Windows Terminal-optimering**
 ✅ **GitHub Copilot CLI-automation**
+
+---
+
+## 🆕 Proton Business Integration (NYT!)
+
+GridShield Security använder nu **Proton Business** för military-grade email security:
+
+**Varför Proton Business?**
+- **End-to-end krypterad email** (Zero-access encryption)
+- **Swiss jurisdiction** (starkare privacy än EU/Sverige)
+- **NIS2/GDPR-compliant** out-of-the-box
+- **Perfect för OT/ICS säkerhetskonsulter** (kritisk infrastruktur)
+
+**Hybrid Email-Arkitektur:**
+```
+📧 PRIMARY EMAIL: Proton Business (christian.wallen@gridshield.se)
+   ├── All extern klientkommunikation
+   ├── Säkerhetsrapporter
+   └── End-to-end encrypted
+
+🎭 EMAIL ALIASES: SimpleLogin Premium (alias.gridshield.se)
+   ├── gitlab@alias.gridshield.se (Development)
+   ├── claroty@alias.gridshield.se (Security vendors)
+   └── kraftnat@alias.gridshield.se (Client portals)
+
+☁️ COLLABORATION: Microsoft 365 (m365.gridshield.se)
+   ├── Teams (internal meetings)
+   ├── SharePoint (document management)
+   ├── Azure AD (device management)
+   └── NO EMAIL (Proton används för email)
+```
+
+**Se detaljerad guide:** [docs/proton-business-setup.md](docs/proton-business-setup.md)
 
 ---
 
@@ -94,12 +130,12 @@ Firefox Multi-Account Containers skapar **isolerade browsing-miljöer** för oli
 | Container | Färg | Användning | Exempel |
 |-----------|------|-----------|---------|
 | **🔵 Work-M365** | Blå | Microsoft 365, Azure, Teams | `portal.office.com`, `portal.azure.com` |
-| **🟢 Work-Google** | Grön | Google Workspace | `mail.google.com`, `drive.google.com` |
+| **🟢 Work-Proton** | Grön | Proton Mail, Calendar, Drive, Pass | `mail.proton.me`, `pass.proton.me`, `simplelogin.io` |
 | **🟠 Development** | Orange | GitLab, GitHub, GitBook | `gitlab.com`, `github.com` |
 | **🔴 Client-Access** | Röd | Klientportaler (Svenska Kraftnät, etc.) | Lägg till efter behov |
 | **🟣 Security-Research** | Lila | CVE-databaser, Claroty, Nozomi | `nvd.nist.gov`, `claroty.com` |
 | **🟡 Testing-Sandbox** | Gul | Osäkra sidor, auto-delete cookies | Används för pentesting |
-| **⚪ Personal** | Vit | Bank, LinkedIn, privat | `linkedin.com`, bank-domäner |
+| **⚪ Personal** | Vit | Bank, LinkedIn, Google (privat) | `linkedin.com`, `gmail.com` (personal) |
 
 **Zero Trust-principen:**
 - Ingen cross-contamination mellan containers
